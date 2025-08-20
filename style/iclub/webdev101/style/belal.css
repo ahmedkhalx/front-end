@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'revFont'; 
+    src: url('../fonts/myfont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'revName'; 
+    src: url('../fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.rev-sec{
+    background-color: #FFFFFF;
+
+}
+
+.rev-sec #rev-header-text {
+    font-family: 'revFont', sans-serif;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;   
+    flex: 1 1 auto;            
+    min-width: 0;
+}
+
+.rev-sec .rev-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rev-sec .rev-btn-cont {
+    margin-right: 2%;
+    margin-left: auto;
+    display: flex;
+    gap: 10px;                 
+    flex-shrink: 0;            
+}              
+
+
+.rev-sec .rev-btn {
+    width: 40px;
+    height: 40px;
+    background-color: inherit;
+    border: none;
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.rev-sec .name{
+    font-family: 'revName', sans-serif;
+}
+
+.rev-sec .verified{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.rev-sec .verified img {
+    width: 16px;               
+    height: 16px;
+    display: block;            
+}
+
+.rev-sec .rev-slider-container {
+    position: relative;
+    overflow: hidden;       
+    width: 100%;
+}
+
+.rev-sec .rev-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.rev-sec .card {
+    flex: 0 0 350px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px #0000001A solid;
+    transition: transform 0.5s, filter 0.5s, opacity 0.5s;
+}
+
+.rev-sec .card.blur {
+    transform: scale(0.9);
+    opacity: 0.2;
+}
+
+.rev-sec .card.focus {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .rev-sec .card {
+        flex: 0 0 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .rev-sec .card {
+        flex: 0 0 70%;
+    }
+}
